@@ -1,0 +1,41 @@
+2024.01.07 (화)
+
+<논리 연산>
+(AND, OR, NOT, XOR)...
+
+<흐름제어>
+1. 분기문 (Branch)
+    (조건문 같은 노드)
+2. 순서문 (Sequence)
+    (입력에 따른 output 로직 순서대로 실행)
+    (blueprint 노드 구조 정리용으로 많이 사용)
+3. Flip Flop
+    (번갈아 실행하는 노드 / 한번은 A 실행 그 다음은 B 실행)
+
+<논리 연산, 흐름 제어별 블루프린트 노드>
+AND Node + Not Node = NAND Node
+(Flip Flop 전환 로직 구현 해보기)
+
+<반복문>
+1. While Loop
+    조건 만족할 때까지 실행, Completed에 초기화문 넣기
+2. For Loop (For Loop with Break)
+    단순 반복은 While Loop보다 노드 구조는 더 간단
+반목문 예제 풀기
+1. 1~100 사이 3의 배수 출력
+2. 1~1000 사이 2의 거듭제곱수 출력
+
+<Material과 Shader>
+1. BP_LightStudio 프로젝트에 적용해보기>
+    파일 -> 새레벨 -> 기본 -> 오브젝터 제거 -> StartContent의 BP_LightStudio 가져오기
+2. Plane 소환 후 Material 적용
+3. Material 프로젝트에 생성 후 제작 (M_BasicPlastic)
+4. 큐브 생성 후 만든 Material 적용
+
+반투명 만들기
+1. 디테일에서 블랜드모드 -> Translucent
+2. 디테일의 반투명 탭에서 라이팅모드 Surface TranslucencyVolume
+
+빛, 그림자
+루멘 사용과 미사용의 예제를 따라해보기
+
