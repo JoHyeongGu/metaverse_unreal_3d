@@ -1,6 +1,7 @@
 <details>
   <summary>2025.01.09 ) 탱크 색 바꾸기 / 블루프린트로 타일맵 미니게임 만들기</summary>
-  <img width="587" alt="스크린샷 2025-01-09 175919" src="https://github.com/user-attachments/assets/9072fbfa-8fd4-4261-8afd-4023f89f9229" />
+  <img width="400" alt="tanks" src="https://github.com/user-attachments/assets/8cd48b5c-ae9b-4435-af98-d2a295581750" />
+  <img width="400" alt="스크린샷 2025-01-09 175919" src="https://github.com/user-attachments/assets/9072fbfa-8fd4-4261-8afd-4023f89f9229" />
 </details>
 
 <details>
@@ -12,12 +13,12 @@
 
 <details>
   <summary>2025.01.07 ) 블루프린트 연산 반복 순서 Flip Flop, 언리얼 쉐이더와 Material 생성</summary>
-  <img width="587" alt="스크린샷 2025-01-07 175919" src="https://github.com/user-attachments/assets/35cadc4b-0307-4ec7-bd55-346ba458c325" />
+  <img width="400" alt="스크린샷 2025-01-07 175919" src="https://github.com/user-attachments/assets/35cadc4b-0307-4ec7-bd55-346ba458c325" />
 </details>
 
 <details>
   <summary>2025.01.06 ) 첫번째 수업, 언리얼 엔진과 블루프린트</summary>
-  <img width="516" alt="스크린샷 2025-01-06 182921" src="https://github.com/user-attachments/assets/83a5a1fc-bf9b-41fe-8e00-698fa99cdbd3" />
+  <img width="400" alt="스크린샷 2025-01-06 182921" src="https://github.com/user-attachments/assets/83a5a1fc-bf9b-41fe-8e00-698fa99cdbd3" />
 </details>
 
 ( 용량이 큰 프로젝트는 Google Drive에 업로드 )
