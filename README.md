@@ -1,6 +1,6 @@
 <details>
   <summary>2025.01.09 ) 탱크 색 바꾸기 / 블루프린트로 타일맵 미니게임 만들기</summary>
-  ![타일맵 만들기](https://github.com/user-attachments/assets/9072fbfa-8fd4-4261-8afd-4023f89f9229)
+  <img width="587" alt="스크린샷 2025-01-09 175919" src="https://github.com/user-attachments/assets/9072fbfa-8fd4-4261-8afd-4023f89f9229" />
 </details>
 
 <details>
