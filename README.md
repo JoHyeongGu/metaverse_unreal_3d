@@ -1,3 +1,12 @@
+
+<details>
+  <summary>2025.01.08 ) 블루프린트를 이용하여 타일 미니 게임 만들기</summary>
+  <code> 
+    <3팀 게임에 대한 평가 ><br/>
+     장점: 1. Text의 색이 구분되어 가독성이 좋다. 2. 단순히 주사위 게임만을 넣은 것이 아닌 탈출권이라는 시스템도 추가하여 콘텐츠가 보다 풍부해졌다.<br/>
+     단점: 1. 이동하지 않고 SpaceBar를 누르면 플레이어가 이겼다는 메세지가 계속 뜬다.  2. 적을 만나도 계속 이동이 가능하다.  </code>
+</details>
+
 <details>
   <summary>2025.01.09 ) 탱크 색 바꾸기 / 블루프린트로 타일맵 미니게임 만들기</summary>
   <img width="400" alt="tanks" src="https://github.com/user-attachments/assets/8cd48b5c-ae9b-4435-af98-d2a295581750" />
