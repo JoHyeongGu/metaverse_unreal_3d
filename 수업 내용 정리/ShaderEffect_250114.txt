@@ -1,0 +1,35 @@
+2024.01.14 (화)
+
+< Constant3Vector 대신 TextureSample을 사용하여 액터에 텍스쳐를 적용해보기 >
+    Texture Coordinate (U 누른 상태로 좌클릭) : 텍스쳐의 U와 V 방향으로 반복 패턴을 설정하는 노드
+    Custom Rotator: 회전을 커스텀 할 수 있는 노드 / UV를 적용하면 UV가 적용된 상태로 회전 가능
+
+    Texture Sample노드로 마스크 영역을 분리해서
+    각 영역에 Lerp노드로 색상을 부여하여 택스쳐를 만들 수 있다.
+
+< 노드 프리뷰 시작 >
+    해당 노드까지 적용된 모습을 뷰포트를 통해 미리 볼 수 있다.
+
+< Fresnel 노드 >
+    시야각에 따라 시야의 수직 부분과 평행 부분을 자연스럽게 마스킹하여 
+    Lerp노드의 Alpha값에 할당하여 자연스러운 마스크 기능을 구현 할 수 있다. 
+    (ex. 벨벳 재질의 천)
+
+< Detail Texturing 노드 >
+    Scale, DiffuseIntensity, NormalInstensity 값에 Constant 값들을 할당하고
+    DetailDiffuse, DetailNormal 값에 Texture Sample 들을 Texture Object로 변환하여 할당하고
+    Diffuse에 앞서 만든 Lerp(Fresnel이 적용된) 노드를 할당하고
+    출력의 Diffuse는 Base Color, Normal은 노멀에 할당한다면
+    좀 더 디테일한 텍스쳐를 구현할 수 있다.
+    (
+        정확한 Detail Texturing의 기능은 자세히 이해하지 못 했음
+        - 이해한 바로는, 거리에 따라 Texture를 다르게 할당하는 역할
+    )
+< 준절차적 머티리얼 생성 >
+    텍스쳐의 패턴이 반복되어 부자연스러워 보이는 부분을 완화시키자
+    여러 샘플 텍스쳐들을 Texture Coordinate 노드로 가공하고 
+    (Desaturation 노드로 채도도 조절할 수 있다. like 탈색)
+    T_MacroVariation 텍스쳐와 같이 랜덤 마스킹 패턴을 가진 텍스쳐를 Alpha로 
+    Lerp 노드를 활용해 적용함으로써
+    하나의 텍스쳐만 사용하는 것이 아닌 비슷한 여러 텍스쳐로 랜덤한 패턴을 만들어,
+    보다 자연스러운 패턴을 만든다.
