@@ -25,6 +25,7 @@
         정확한 Detail Texturing의 기능은 자세히 이해하지 못 했음
         - 이해한 바로는, 거리에 따라 Texture를 다르게 할당하는 역할
     )
+
 < 준절차적 머티리얼 생성 >
     텍스쳐의 패턴이 반복되어 부자연스러워 보이는 부분을 완화시키자
     여러 샘플 텍스쳐들을 Texture Coordinate 노드로 가공하고 
@@ -56,3 +57,14 @@
     기능은 같지만 입력 키가 다른 경우 (플랫폼에 따른 컨트롤러 차이)
     Action Mappings
     Axis Mappings
+    Project Settings/Input(입력)/Mapping Key 생성 가능
+    해당 Key의 이름을 BP 내에서 입력 시, 이벤트 노드 생성 가능
+
+< 애니메이션 >
+    BP 내부의 뷰포트에서 애니메이션 탭의 애니메이션 모드는 기본적으로
+    Use Animation Blueprint로 설정되어 있다.
+
+    옛날에는 Use Animation Asset을 사용하여 애니메이션을 트리거 했었는데
+    자신의 이벤트그래프에서 이벤트를 받으면 Set Animation으로 에셋을 바꿔주는 형태로 동작했었다.
+
+내일은 Use Animation Blueprint를 사용하는 방법을 터득한다.

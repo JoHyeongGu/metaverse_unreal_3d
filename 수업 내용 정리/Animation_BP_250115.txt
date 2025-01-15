@@ -1,0 +1,30 @@
+2024.01.15 (수)
+
+< 애니메이션 블루프린트 >
+    --------------------------
+    Mesh Component - Animation
+        Use Animation Asset
+        Use Animation Blueprint
+    FSM (유한 상태 기계)
+        제한된 상태를 정의
+        상태에 따라 적절한 애니메이션을 실행
+    --------------------------
+    Event Graph
+        상태 변경에 필요한 데이터 수정, 참조
+    Anim Graph
+        Output Pose
+        상태에 따라 적절한 애니메이션 실행
+        Transaction: 상태의 변경
+
+    / 시험문제 느낌 (어떤 특성이 어떤 컴포넌트에 있는지) /
+    / ex. Velocity는 어떤 컴포넌트에 있는지 /
+
+< 애니메이션 몽타주 >
+    영화나 사진 편집 구성의 한 방법
+        따로따로 촬영한 화면을 적절하게 떼어 붙여서 하나의 긴밀하고도 새로운 장면이나 내용으로 만드는 일
+    Animation - Animation Montage 생성
+    Group - Slot - Section - Anim
+    연속된 애니메이션 편집
+
+    여러 애니메이션을 불러와 색션을 나눠서 콤보를 구현할 수 있다.
+    
