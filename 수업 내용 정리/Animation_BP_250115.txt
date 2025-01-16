@@ -14,7 +14,7 @@
     Anim Graph
         Output Pose
         상태에 따라 적절한 애니메이션 실행
-        Transaction: 상태의 변경
+        Transition: 상태의 변경
 
     / 시험문제 느낌 (어떤 특성이 어떤 컴포넌트에 있는지) /
     / ex. Velocity는 어떤 컴포넌트에 있는지 /
