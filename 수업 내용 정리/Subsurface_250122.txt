@@ -1,0 +1,22 @@
+2024.01.22 (수)
+
+< 왁스 재질 표현하기 >
+    빛이 살짝 통과하며 내부에서 번지는 머티리얼을 표현해보자
+    설정:
+        서브서피스 스캐터링 이팩트를 사용하려면 
+        shadow map method : 버추얼 섀도 맵 대신 디폴트 섀도 맵을 써야 한다.
+        근데 예제에서 다시 Virtual shadow map으로 바꾸라함 (이랬다 저랬다)
+
+    Material -> profiles -> subsurface profile
+    shading model -> default lit -> subsurface profile
+
+< 물에서 굴절 사용 >
+    1. Scene Depth 노드에서 PixelDepth를 뺴서 적당한 Scalar 값을 곱해준다.
+        Scene Depth: 오브젝트 뒤에 있는 씬의 깊이를 샘플링 (반투명 머티리얼로 작업할 때만 사용)
+        Pixel Depth: 오브젝트의 표면과 카메라 사이의 거리가 아니라 그 뒤에 있는 것까지의 거리를 제공
+    2. Fade Distance -> Depth Fade -> oneMinus -> Power : 다른 오브젝트와 닿는 면이 더 하얗게 나옴
+
+    평면에서의 효과적인 반투명 효과 -> Refraction Method: Pixel Normal Offset
+
+< 라이트 함수를 사용한 투영 >
+    라이트 함수 채널 설정해서 특정 객체만 라이트 적용 가능
