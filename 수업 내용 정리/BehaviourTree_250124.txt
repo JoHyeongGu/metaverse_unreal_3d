@@ -1,0 +1,30 @@
+2024.01.24 (금)
+
+< 행동 트리 >
+    - 모듈화가 잘 되어 있다.
+    - 복잡한 인공지능을 쉽게 설계화 할 수 있다.
+
+    1. 행동 트리 모델의 구성 요소
+        (깊이 우선 탐색) : 왼쪽 아래부터 탐색
+        composite 노드 / action 노드
+
+    2. Composite 노드의 종류
+        1) Selector 노드
+            Action 1 또는 Action 2 선택 / 밥과 영화 중 선택
+            성공한 노드가 나오면 종료 / 밥이 안 나오면 영화를 대신 본다
+        2) Sequence 노드
+            Action 1 후에 Action 2 진행 / 밥을 먹고 영화를 본다
+            실패한 노드가 나올 때까지 진행 / 밥을 안 먹으면 영화도 안 봄
+        3) Parallel 노드
+            Action 1과 Action 2를 동시에 / 밥 먹으면서 영화를 본다
+
+    3. Composite 노드에 부착하는 다양한 추가 기능
+        Decorator - 조건식  |  마트에서 장을 본다. (Sequence) (마트 공휴일이 아님 // Decorator)
+        Service - 동작 추가 | 2시간 동안 시험을 친다. (Sequence) (30분마다 시간 알림 // Service)
+        Abort - 동작 중지 조건 | 연락이 올 때까지 일한다.(Sequence) (연락이 오면 중지 // Abort)
+
+< Black Board >
+    어떤 속도 움직일 건지 등등의 데이터들을 저장하는 곳 추후 Behaviour_Tree에서 사용함
+    (BT의 변수 관리자 같은 느낌)
+
+    
