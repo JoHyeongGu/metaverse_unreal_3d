@@ -1,4 +1,4 @@
-2024.01.14 (화)
+2025.01.14 (화)
 
 < Constant3Vector 대신 TextureSample을 사용하여 액터에 텍스쳐를 적용해보기 >
     Texture Coordinate (U 누른 상태로 좌클릭) : 텍스쳐의 U와 V 방향으로 반복 패턴을 설정하는 노드

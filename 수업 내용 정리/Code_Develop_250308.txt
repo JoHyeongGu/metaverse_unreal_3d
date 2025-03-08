@@ -1,0 +1,20 @@
+2025.03.16 (목)
+
+<C++로 프로젝트 만들기>
+    1. C++ Base 프로젝트 생성
+    2. Player, Game, Character, Prop 으로 폴더를 구분하여 파일 구조 관리
+
+<C++ 클래스로 게임모드와 PlayerController 제작>
+    1. ThirdPersonTemplate 불러오기
+    2. BP_ThirdPersonTemplate의 Reference를 복사하여 ConstructorHelpers::ClassFinder 함수로 Reference 불러오기
+    (* 블루프린트의 Reference 이므로 경로 뒤에 "_C"를 붙여 클래스를 불러옴을 명시한다.)
+    3. GameMode 클래스에서 해당 Reference의 Class를 DefaultPawnClass에 대입한다.
+    4. 새로 만든 C++ PlayerController 클래스를 PlayerControllerClass에 대입한다.
+    5. 에디터로 들어와, World Setting에 GameMode를 새로 만든 C++ GameMode를 할당해주면 세팅이 완료 된다.
+
+<C++ 클래스로 Static Mesh Actor 만들기>
+    1. Static Mesh 에셋들의 Reference로 Object들을 불러온다.
+    (* ConstructorHelpers::ObjectFinder)
+    2. 각 Object들을 변수로 저장하고 CreateDefaultSubObject를 통해 Component를 생성한다.
+    3. 각 Component들을 RootComponent에 Attach 해준다.
+    4. Source에 들어있는 C++ Class를 월드에 배치하여 사용한다.
