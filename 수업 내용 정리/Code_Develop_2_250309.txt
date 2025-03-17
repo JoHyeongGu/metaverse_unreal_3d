@@ -1,0 +1,63 @@
+2025.03.09 (목)
+
+< 컴포넌트 지정자 >
+    * Visible / Edit : 접두사, 호환 X
+    * Anywhere / DefaultOnly / InstanceOnly : 접미사
+    * BlueprintReadOnly / BlueprintReadWrite : 호환 되지 않음
+    * Category : 에디터 편집 영역 (Detail) 속성 범주 영역
+
+< Character 설정 >
+    * "Components/CapsuleComponent.h"를 include하여 GetCapsuleComponent를 호출하여 간편하게 
+        CapsuleComponent 값을 수정할 수 있음
+    * "GameFramework/CharacterMovementComponent.h"를 include하여 GetCharacterMovement를 호출하여 간편하게 
+        Movement 값을 수정할 수 있음
+
+    <Example Code>
+    AABCharacterBase::AABCharacterBase()
+    {
+        // Pawn
+        bUseControllerRotationPitch = false;
+        bUseControllerRotationRoll = false;
+        bUseControllerRotationYaw = false;
+
+        // Capsule Component
+        GetCapsuleComponent()->InitCapsuleSize(42.0f, 96.0f);
+        GetCapsuleComponent()->SetCollisionProfileName(TEXT("Pawn"));
+
+        // Movement
+        GetCharacterMovement()->bOrientRotationToMovement = true;
+        GetCharacterMovement()->RotationRate = FRotator(0.0f, 500.0f, 0.0f);
+        GetCharacterMovement()->JumpZVelocity = 700.0f;
+        GetCharacterMovement()->AirControl = 0.35f;
+        GetCharacterMovement()->MaxWalkSpeed = 400.0f;
+        GetCharacterMovement()->MinAnalogWalkSpeed = 20.0f;
+        GetCharacterMovement()->BrakingDecelerationWalking = 2000.0f;
+
+        // Mesh
+        GetMesh()->SetRelativeLocationAndRotation(
+            FVector(0.0f, 0.0f, -100.0f), FRotator(0.0f, -90.0f, 0.0f));
+        GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+        GetMesh()->SetCollisionProfileName(TEXT("CharacterMesh"));
+    }
+< 카메라 부착>
+    - Code
+        // Camera
+        CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
+        CameraBoom->SetupAttachment(RootComponent);
+        CameraBoom->TargetArmLength = 500.0f;
+        CameraBoom->bUsePawnControlRotation = true;
+
+        FollowCam = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCam"));
+        FollowCam->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+        FollowCam->bUsePawnControlRotation = false;
+
+CastChecked : 형변환 시도 후, 실패하면 프로그램 종료
+Cast : 형변환 시도 후, 실패하면 null 포인터 반환
+
+Input Mapping Context 적용하는 법
+    APlayerController* PlayerController = CastChecked<APlayerController>(GetController());
+    if (UEnhancedInputLocalPlayerSubsystem* SubSystem =
+        ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+    {
+        SubSystem->AddMappingContext(DefaultMappingContext, 0);
+    }
